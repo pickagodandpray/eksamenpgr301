@@ -12,7 +12,7 @@ before_install:
 jobs:
   include:
     - stage: build docker image
-    script:
-      - docker build -f Dockerfile -t eksamenpgr301 .
+      script:
+        - docker build -f Dockerfile -t eksamenpgr301 .
 
 
