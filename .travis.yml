@@ -8,4 +8,11 @@ addons:
       - oracle-java9-installer
 before_install:
   - chmod +x mvnw
-  -  docker build -f Dockerfile -t eksamenpgr301 .
+
+jobs:
+  include:
+    - stage: build docker image
+    script:
+      - docker build -f Dockerfile -t eksamenpgr301 .
+
+
