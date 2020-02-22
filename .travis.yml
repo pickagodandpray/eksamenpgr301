@@ -14,7 +14,7 @@ jobs:
     - stage: build docker image
       script:
         - docker build -f Dockerfile -t tommymai/eksamenpgr301:eksamenpgr301 .
-        - docker tag eksamenpgr301:eksamenpgr301
+        - docker tag eksamenpgr301 eksamenpgr301
     - stage: push to docker hub
       script:
         - docker push tommymai/eksamenpgr301:eksamenpgr301
