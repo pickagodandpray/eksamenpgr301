@@ -11,14 +11,10 @@ before_install:
 
 jobs:
   include:
-    - stage: build docker image
+    - stage: build docker image/ login then push to docker hub
       script:
         - docker build -f Dockerfile -t tommymai/eksamenpgr301:eksamenpgr301 .
-    - stage: Login to docker hub
-      script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - stage: push to docker hub
-      script:
         - docker push tommymai/eksamenpgr301:eksamenpgr301
 
 
