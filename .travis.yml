@@ -16,7 +16,7 @@ jobs:
         - docker build -f Dockerfile -t eksamenpgr301 .
     - stage: push to docker hub
       script:
-        - docker push eksamenpgr301:tagname
+        - docker push tommymai/4f8462d316d5:tagname
 
 
 
