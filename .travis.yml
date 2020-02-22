@@ -14,5 +14,10 @@ jobs:
     - stage: build docker image
       script:
         - docker build -f Dockerfile -t eksamenpgr301 .
+    - stage: push to docker hub
+      script:
+        - docker push tommymai/eksamenpgr301:tagname
+
+
 
 
