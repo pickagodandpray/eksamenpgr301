@@ -1,0 +1,7 @@
+management:
+  metrics:
+    export:
+      influx:
+        uri: http://localhost:8086
+        db: services
+        step: 5s
